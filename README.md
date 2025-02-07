@@ -1,2 +1,2 @@
 # Pippy-pretty
-A web page declaring pippy's beauty
+A web page declaring L's beauty
