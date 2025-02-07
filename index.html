@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balloon Surprise</title>
+    <title>L is the best girl ever</title>
     <style>
         body {
             display: flex;
@@ -30,6 +30,7 @@
             border-radius: 10px;
             cursor: pointer;
             transition: 0.3s;
+            margin-top: 20px;
         }
 
         button:hover {
@@ -48,6 +49,22 @@
             transition: opacity 1s ease-in-out;
         }
 
+        #secondButton {
+            display: none;
+        }
+
+        #message2 {
+            display: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            transition: opacity 1s ease-in-out;
+        }
+
         /* Responsive Design */
         @media (max-width: 600px) {
             button {
@@ -55,7 +72,7 @@
                 padding: 12px 25px;
             }
 
-            #message {
+            #message, #message2 {
                 font-size: 18px;
                 padding: 15px;
             }
@@ -68,13 +85,26 @@
     <div class="container">
         <button onclick="showMessage()">Click Me</button>
         <div id="message">L is the best and the funniest and she's nothing like others say</div>
+        
+        <button id="secondButton" onclick="showMessage2()">Wanna know more?</button>
+        <div id="message2">They are the bitches!</div>
     </div>
 
     <script>
         function showMessage() {
             const message = document.getElementById('message');
+            const secondButton = document.getElementById('secondButton');
+            
             message.style.display = 'block';
             message.style.opacity = '1';
+            
+            secondButton.style.display = 'inline-block';
+        }
+
+        function showMessage2() {
+            const message2 = document.getElementById('message2');
+            message2.style.display = 'block';
+            message2.style.opacity = '1';
         }
     </script>
 
